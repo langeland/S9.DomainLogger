@@ -1,0 +1,29 @@
+<f:layout name="Default" />
+
+<f:section name="Title">Edit domain "{domain.domainName}"</f:section>
+
+<f:section name="Header">
+</f:section>
+
+<f:section name="Footer">
+</f:section>
+
+<f:section name="Content">
+
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<f:render partial="FlashMessages" />
+				<f:form class="form-horizontal" action="update" object="{domain}" name="domain">
+					<f:render partial="Model/Domain/FormFields" arguments="{domain: domain}" />
+					<div class="control-group">
+						<div class="controls">
+							<f:form.submit value="Update" class="btn" />
+						</div>
+					</div>
+
+				</f:form>
+			</div>
+		</div>
+	</div>
+</f:section>

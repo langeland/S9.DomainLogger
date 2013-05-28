@@ -1,0 +1,28 @@
+<f:layout name="Default" />
+
+<f:section name="Title">Show inquiry "{domain.domainName}"</f:section>
+
+<f:section name="Header">
+</f:section>
+
+<f:section name="Footer">
+</f:section>
+
+<f:section name="Content">
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+			<f:render partial="FlashMessages" />
+				<table>
+					<tr>
+						<th>Name</th>
+						<td>{domain.domainName}</td>
+					</tr>
+				</table>
+				
+				<f:debug>{domain}</f:debug>
+				
+			</div>
+		</div>
+	</div>
+</f:section>

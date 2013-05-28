@@ -1,0 +1,30 @@
+<f:layout name="Default" />
+
+<f:section name="Title">New domain</f:section>
+
+<f:section name="Content">
+	<p>Just fill out the following form to create a new domain:</p>
+
+	<f:form action="create" name="newDomain">
+		<ol>
+			<li>
+				<label for="domainName">Domain name</label>
+				<f:form.textfield property="domainName" id="domainName" />
+			</li>
+		
+			<li>
+				<label for="status">Status</label>
+				<f:form.textfield property="status" id="status" />
+			</li>
+		
+			<li>
+				<label for="lastExecution">Last execution</label>
+				<f:form.textfield type="datetime" value="{f:format.date(date: 'now', format: 'Y-m-d\TH:i:sP')}" property="lastExecution" id="lastExecution" />
+			</li>
+		
+			<li>
+				<f:form.submit value="Create" />
+			</li>
+		</ol>
+	</f:form>
+</f:section>

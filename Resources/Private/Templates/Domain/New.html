@@ -1,0 +1,29 @@
+<f:layout name="Default" />
+
+<f:section name="Title">New inquiry</f:section>
+
+<f:section name="Header">
+</f:section>
+
+<f:section name="Footer">
+</f:section>
+
+<f:section name="Content">
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<f:render partial="FlashMessages" />
+				<p>Just fill out the following form to create a new domain:</p>
+				<f:form class="form-horizontal" action="create" name="newDomain">
+					<f:render partial="Model/Domain/FormFields" arguments="{domain: domain}" />
+					<div class="control-group">
+						<div class="controls">
+							<f:form.submit value="Create" class="btn" />
+						</div>
+					</div>
+
+				</f:form>
+			</div>
+		</div>
+	</div>
+</f:section>

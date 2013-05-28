@@ -1,0 +1,40 @@
+<f:flashMessages as="flashMessages">
+
+
+
+	<f:for each="{flashMessages}" as="flashMessage">
+
+		<f:if condition="{0: flashMessage.severity} == {0: 'OK'}">
+			<div class="alert alert-block alert-success">
+				<button type="button" class="close" data-dismiss="alert">&times;</button>
+				<h4>{flashMessage.title}</h4>
+				{flashMessage.message}
+			</div>
+		</f:if>
+
+		<f:if condition="{0: flashMessage.severity} == {0: 'Notice'}">
+			<div class="alert alert-block alert-info">
+				<button type="button" class="close" data-dismiss="alert">&times;</button>
+				<h4>{flashMessage.title}</h4>
+				{flashMessage.message}
+			</div>
+		</f:if>
+
+		<f:if condition="{0: flashMessage.severity} == {0: 'Warning'}">
+			<div class="alert alert-block">
+				<button type="button" class="close" data-dismiss="alert">&times;</button>
+				<h4>{flashMessage.title}</h4>
+				{flashMessage.message}
+			</div>
+		</f:if>
+
+		<f:if condition="{0: flashMessage.severity} == {0: 'Error'}">
+			<div class="alert alert-block alert-error">
+				<button type="button" class="close" data-dismiss="alert">&times;</button>
+				<h4>{flashMessage.title}</h4>
+				{flashMessage.message}
+			</div>
+		</f:if>
+
+	</f:for>
+</f:flashMessages>

@@ -1,0 +1,21 @@
+<f:security.ifAuthenticated>
+	<f:then>
+		<ul class="nav pull-right">
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">User <b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li class="divider"></li>
+					<li class="nav-header">InquiryResult</li>
+					<li><f:link.action action="logout" controller="Authentication" package="S9.Quayo">Logout</f:link.action></li>
+				</ul>
+			</li>
+		</ul>
+	</f:then>
+	<f:else>
+		<f:form action="authenticate" controller="Authentication" package="S9.Quayo" class="navbar-form pull-right">
+			<f:form.textfield additionalAttributes="{placeholder:'Username'}" class="span2" id="inputEmail" name="__authentication[TYPO3][Flow][Security][Authentication][Token][UsernamePassword][username]" />
+			<f:form.password additionalAttributes="{placeholder:'Password'}" class="span2" id="inputPassword" name="__authentication[TYPO3][Flow][Security][Authentication][Token][UsernamePassword][password]" />
+			<f:form.submit value="Sign in" class="btn" />
+		</f:form>
+	</f:else>
+</f:security.ifAuthenticated>
